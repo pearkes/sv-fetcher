@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>{{.Title}}</title>
+    <link href="http://d1u1r4gda0jxkt.cloudfront.net/main.css" rel="stylesheet" type="text/css">
+    {{range .Css}}
+    <link href="{{.Url}}" rel="stylesheet" type="text/css">
+    {{end}}
+</head>
+<body class="first-victory">
+<!-- Watching you! -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42676328-1', 'smallvictori.es');
+  ga('send', 'pageview');
+
+</script>
+<header>
+    <h1 class="site-title">{{.Title}}</h1>
+</header>
+<div class="wrapper">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        {{range .Projects}}
+        <div class="project {{.Tag}}">
+          {{range .Assets}}
+            <div class="item">
+              {{if .Image}}
+              <img src="{{.Url}}"/>
+              {{else}}
+              <p>{{.Content}}</p>
+              {{end}}
+            </div>
+          {{end}}
+        </div>
+        {{end}}
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <h2><a href="http://www.smallvictori.es">This is a<br>Small Victory</a></h2>
+  <div class="gifload"></div>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{{range .Js}}
+<script type="text/javascript" src="{{.Url}}"></script>
+{{end}}
+</body>
+</html>

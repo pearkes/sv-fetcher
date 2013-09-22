@@ -1,0 +1,21 @@
+# You can change these, and soon they will be read and updated
+
+domain: {{.Domain}}
+title: {{.Title}}
+
+# To set up a custom URL:
+#
+# 1. go to the admin area of wherever you manage your domains. If you don't have a domain, buy one (we like dnsimple.com)
+# 2. look for your DNS settings
+# 3. set up a new CNAME. The host record should be set to whatever your desired subdomain is. Point it at smallvictori.es
+# 4. in this file, change "domain: 1234567.smallvictori.es" to your new subdomain (like www.example.com)
+# 5. sometimes DNS changes can take a while to propagate so check back later
+#
+# DNS stuff confusing? google explains it well: http://support.google.com/a/bin/answer.py?hl=en&answer=47283
+#
+# Feel free to email broken@smallvictori.es if you need help :-)
+
+# Any errors will appear here
+{{ range .Errs}}
+{{.Error }}
+{{ end }}
