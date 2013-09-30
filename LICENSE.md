@@ -1,4 +1,4 @@
-Copyright (c) 2013 Jack Pearkes
+Copyright (c) 2013 Jack Pearkes and Jacob Heftmann
 
 MIT License
 
