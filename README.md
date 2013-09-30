@@ -1,4 +1,4 @@
--# sv-fetcher
+# sv-fetcher
 
 This is service for [Small Victories](https://smallvictori.es) that
 continually polls a user's Dropbox for changes. If changes are detected,
