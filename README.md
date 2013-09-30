@@ -1,6 +1,6 @@
-![sv logo](https://f.cloud.github.com/assets/846194/1235425/02c60fe6-29a6-11e3-809a-2140784b2934.png)
-
----
+<p align="center">
+    <a href="https://smallvictori.es"><img src="https://f.cloud.github.com/assets/846194/1235472/24f70d94-29a7-11e3-835a-84f55972b657.png" /></a>
+</p>
 
 This is service for [Small Victories](https://smallvictori.es) that
 continually polls a user's Dropbox for changes. If changes are detected,
