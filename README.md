@@ -30,10 +30,10 @@ Considerations for the design were as follows:
 
 ## Hacking and Deploying
 
-This service is written entirely in [Go](), so you'll need to download
+This service is written entirely in [Go](http://golang.org/), so you'll need to download
 and install that.
 
-You'll also need [Foreman]() to start the application with the proper environment
+You'll also need [Foreman](http://ddollar.github.io/foreman/) to start the application with the proper environment
 variables.
 
 To configure the service, you can use the configuration example and create
@@ -49,6 +49,29 @@ To run the tests:
 
     $ go test
     ...
+
+To deploy:
+
+    $ heroku create -b https://github.com/kr/heroku-buildpack-go.git
+    ...
+    $ git push heroku master
+    ...
+
+You'll need:
+
+- Heroku account
+- Heroku Postgres database
+- Redis add-on of some kind
+- Librato Metrics account
+
+Use `heroku config:add` to add environment variables based on your
+various tokens from the above to create the production environment,
+as it is described in `.env.example`.
+
+### Shared Credentials
+
+Keep in mind these credentials should be shared with the [sv-frontend](https://github.com/pearkes/sv-frontend),
+so you'll need to add the same environment variables there.
 
 ## Contributions
 
