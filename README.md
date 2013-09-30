@@ -1,5 +1,7 @@
 # sv-fetcher
 
+![sv logo](https://f.cloud.github.com/assets/846194/1235401/0a4d1526-29a5-11e3-9559-67b36174ff75.gif)
+
 This is service for [Small Victories](https://smallvictori.es) that
 continually polls a user's Dropbox for changes. If changes are detected,
 it renders the assets in the folder into a HTML webpage and places
