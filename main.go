@@ -153,6 +153,9 @@ func main() {
 		log.Printf("GOD: Run complete, users proccessed: %v", processed)
 		metrics.Event(stats.RUN_COMPLETE)
 
+		// Send a total user count
+		metrics.Raw(db.UserCount(), "_total_users_created")
+
 		// Sleep arbitrarily between runs
 		time.Sleep(time.Second * RUN_DELAY)
 	}
